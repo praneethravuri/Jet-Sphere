@@ -13,6 +13,8 @@ app.set("view engine", "ejs"); // Set EJS as the view engine
 const port = process.env.PORT || 8000;
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // Add this line to parse the request body
+
 app.use(errorHandler);
 
 // routes

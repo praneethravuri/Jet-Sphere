@@ -8,6 +8,10 @@ const brcypt = require("bcrypt");
 
 const userCreateAccount = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
+
+  console.log(email);
+  console.log(password);
+
   if (!email || !password) {
     res.status(400);
     throw new Error("All fields are mandatory");

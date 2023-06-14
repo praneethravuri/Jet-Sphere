@@ -3,10 +3,11 @@ const router = express.Router();
 
 const { userLogin } = require("../controllers/loginController");
 
-router.route("/")
+router
+  .route("/")
   .get((req, res) => {
-    // Render the index.ejs template
-    res.render("index", { message: "This is the login page 123" });
+    // Render the index.ejs template with initial messages as empty
+    res.render("index", { errorMessage: "", successMessage: "" });
   })
   .post(userLogin);
 
