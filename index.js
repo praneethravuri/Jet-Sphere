@@ -17,6 +17,11 @@ app.use(errorHandler);
 app.use("/login", require("./routes/loginRoute"));
 app.use("/create-account", require("./routes/createAccountRoute"));
 
+// Redirect root URL to /login
+app.get("/", (req, res) => {
+  res.redirect("/login");
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
