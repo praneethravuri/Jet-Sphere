@@ -8,6 +8,8 @@ connectDB();
 
 const app = express();
 
+app.set("view engine", "ejs"); // Set EJS as the view engine
+
 const port = process.env.PORT || 8000;
 
 app.use(express.json());
@@ -17,7 +19,6 @@ app.use(errorHandler);
 app.use("/login", require("./routes/loginRoute"));
 app.use("/create-account", require("./routes/createAccountRoute"));
 
-// Redirect root URL to /login
 app.get("/", (req, res) => {
   res.redirect("/login");
 });
