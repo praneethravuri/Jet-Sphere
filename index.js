@@ -2,9 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const errorHandler = require("./middleware/errorHandler");
-//const connectDB = require("./config/dbConnection");
+const connectDB = require("./config/dbConnection");
 
-//connectDB();
+connectDB();
 
 const app = express();
 
@@ -15,6 +15,7 @@ app.use(errorHandler);
 
 // routes
 app.use("/login", require("./routes/loginRoute"));
+app.use("/create-account", require("./routes/createAccountRoute"));
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
