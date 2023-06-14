@@ -1,0 +1,31 @@
+{
+  "name": "jetsphere",
+  "version": "1.0.0",
+  "description": "A full stack website to book and manage flight tickets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praneethravuri/JetSphere.git"
+  },
+  "keywords": [
+    "flights",
+    "management",
+    "bookings"
+  ],
+  "author": "Praneeth Ravuri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/praneethravuri/JetSphere/issues"
+  },
+  "homepage": "https://github.com/praneethravuri/JetSphere#readme",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.4",
+    "nodemon": "^2.0.22"
+  }
+}
