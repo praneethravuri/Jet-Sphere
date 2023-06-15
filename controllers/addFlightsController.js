@@ -8,13 +8,15 @@ const fs = require("fs");
 // API URL - http://localhost:5000/add-flights
 
 const addFlights = asyncHandler(async (req, res) => {
-  // open the json file containing the flight details
+  // open the JSON file containing the flight details
   const flightsData = fs.readFileSync(
     __dirname + "/../data/flightDetails.json"
   );
 
-  // parse the json data
+  // parse the JSON data
   const flights = JSON.parse(flightsData);
+
+  const flightIdArray = [];
 
   for (const flight of flights) {
     const {
@@ -31,10 +33,16 @@ const addFlights = asyncHandler(async (req, res) => {
       duration,
     } = flight;
 
+    if (flightIdArray.includes(flightId)) {
+      console.log(`Duplicate flight : ${flightId}`);
+    }
+
+    flightIdArray.push(flightId);
+
     // find the flight details using the flightId
     const searchFlight = await Flights.findOne({ flightId });
 
-    if (!searchFlight) {
+    if (!searchFlight && !flightIdArray.includes(flightId)) {
       await Flights.create({
         flightId,
         airlineName,
@@ -48,19 +56,13 @@ const addFlights = asyncHandler(async (req, res) => {
         arrivalTime,
         duration,
       });
-      res
-        .status(200)
-        .json({
-          message: `Flight: ${flightId} has been added to the database`,
-        });
+      console.log(`Flight: ${flightId} has been added to the database`);
     } else {
-      res
-        .status(400)
-        .json({
-          message: `Flight : ${flightId} is already present in the database`,
-        });
+      console.log(`Flight: ${flightId} is already present in the database`);
     }
   }
+  console.log("Flights have been processed");
+  res.status(200).json({ message: "Flights have been processed" });
 });
 
 module.exports = {
