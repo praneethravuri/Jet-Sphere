@@ -31,11 +31,11 @@ const userCreateAccount = asyncHandler(async (req, res) => {
   const createUser = await Credentials.create({
     email,
     password: hashedPassword,
-    name
+    name,
   });
 
   if (createUser) {
-    res.render("homepage", { email : email, password : password, name: name })
+    res.render("homepage", { email: email, password: password, name: name });
   } else {
     res.status(400);
     throw new Error("User data is not valid");

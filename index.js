@@ -20,6 +20,7 @@ app.use(errorHandler);
 // routes
 app.use("/login", require("./routes/loginRoute"));
 app.use("/create-account", require("./routes/createAccountRoute"));
+app.use("/add-flights", require("./routes/addFlightsRoute"));
 
 app.get("/", (req, res) => {
   res.redirect("/login");
