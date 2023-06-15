@@ -21,6 +21,7 @@ app.use(errorHandler);
 app.use("/login", require("./routes/loginRoute"));
 app.use("/create-account", require("./routes/createAccountRoute"));
 app.use("/add-flights", require("./routes/addFlightsRoute"));
+app.use("/homepage", require("./routes/homepageRoute"));
 
 app.get("/", (req, res) => {
   res.redirect("/login");

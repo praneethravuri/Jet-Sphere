@@ -20,9 +20,11 @@ const addFlights = asyncHandler(async (req, res) => {
     const {
       flightId,
       airlineName,
-      source,
+      sourceCity,
+      sourceCountry,
       sourceIATA,
-      destination,
+      destinationCity,
+      destinationCountry,
       destinationIATA,
       departureTime,
       arrivalTime,
@@ -35,17 +37,18 @@ const addFlights = asyncHandler(async (req, res) => {
       await Flights.create({
         flightId,
         airlineName,
-        source,
-        sourceIATA,
-        destination,
-        destinationIATA,
+        sourceCity,
+        sourceCountry,
+        sourceIATA: sourceIATA.toUpperCase(),
+        destinationCity,
+        destinationCountry,
+        destinationIATA: destinationIATA.toUpperCase(),
         departureTime,
         arrivalTime,
         duration,
       });
       console.log(`Flight: ${flightId} has been added to the database`);
-    }
-    else{
+    } else {
       console.log(`Flight: ${flightId} is already present in the database`);
     }
   }

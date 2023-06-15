@@ -10,17 +10,25 @@ const flightsSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add the airlineName"],
     },
-    source: {
+    sourceCity: {
       type: String,
-      required: [true, "Please enter the source"],
+      required: [true, "Please enter the source city"],
+    },
+    sourceCountry: {
+      type: String,
+      required: [true, "Please enter the source country"],
     },
     sourceIATA: {
       type: String,
       required: [true, "Please enter the source iata"],
     },
-    destination: {
+    destinationCity: {
       type: String,
-      required: [true, "Please enter the destination"],
+      required: [true, "Please enter the destination city"],
+    },
+    destinationCountry: {
+      type: "String",
+      required: [true, "Please enter the destination country"],
     },
     destinationIATA: {
       type: String,

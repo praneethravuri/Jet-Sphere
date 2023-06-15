@@ -28,13 +28,13 @@ const userCreateAccount = asyncHandler(async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, 10);
   console.log(`Hashed password : ${hashedPassword}`);
 
-  const createUser = await Credentials.create({
+  const user = await Credentials.create({
     email,
     password: hashedPassword,
     name,
   });
 
-  if (createUser) {
+  if (user) {
     res.render("homepage", { email: email, password: password, name: name });
   } else {
     res.status(400);

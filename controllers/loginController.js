@@ -10,18 +10,18 @@ const bcrypt = require("bcrypt");
 const userLogin = asyncHandler(async (req, res) => {
   const { email, password} = req.body;
 
-  const credentials = await Credentials.findOne({ email });
+  const user = await Credentials.findOne({ email });
 
-  if (!credentials) {
+  if (!user) {
     // Invalid email or password
     res.render("index", { errorMessage: "Invalid email or password", successMessage: "" });
   } else {
-    const isPasswordMatch = await bcrypt.compare(password, credentials.password);
+    const isPasswordMatch = await bcrypt.compare(password, user.password);
 
     if (isPasswordMatch) {
       // Login successful
 
-      res.render("homepage", { email : email, password : password, name: credentials.name });
+      res.redirect("/homepage");
     } else {
       // Invalid email or password
       res.render("index", { errorMessage: "Invalid email or password", successMessage: "" });
