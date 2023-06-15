@@ -8,13 +8,13 @@ const fs = require("fs");
 // API URL - http://localhost:5000/add-flights
 
 const addFlights = asyncHandler(async (req, res) => {
+  // open the json file containing the flight details
   const flightsData = fs.readFileSync(
     __dirname + "/../data/flightDetails.json"
   );
 
+  // parse the json data
   const flights = JSON.parse(flightsData);
-
-  //console.log(flights);
 
   for (const flight of flights) {
     const {
@@ -31,6 +31,7 @@ const addFlights = asyncHandler(async (req, res) => {
       duration,
     } = flight;
 
+    // find the flight details using the flightId
     const searchFlight = await Flights.findOne({ flightId });
 
     if (!searchFlight) {
@@ -47,13 +48,19 @@ const addFlights = asyncHandler(async (req, res) => {
         arrivalTime,
         duration,
       });
-      console.log(`Flight: ${flightId} has been added to the database`);
+      res
+        .status(200)
+        .json({
+          message: `Flight: ${flightId} has been added to the database`,
+        });
     } else {
-      console.log(`Flight: ${flightId} is already present in the database`);
+      res
+        .status(400)
+        .json({
+          message: `Flight : ${flightId} is already present in the database`,
+        });
     }
   }
-
-  res.status(200).json({ message: "Added flights successfully" });
 });
 
 module.exports = {

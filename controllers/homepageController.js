@@ -6,6 +6,7 @@ const Flights = require("../models/flightsModel");
 //@access Private
 // API URL - http://localhost:5000/homepage
 
+// send a message when homepage is reached
 const homepage = asyncHandler(async (req, res) => {
   res.status(200).json({ message: "reached homepage" });
 });

@@ -1,5 +1,6 @@
 const {constants} = require("../constants");
 
+// error codes for async functions
 const errorHandler = (err, req, res, next) => {
   const statusCode = res.statusCode ? res.statusCode : 500;
 

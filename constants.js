@@ -1,3 +1,5 @@
+// error codes and their meaning
+
 exports.constants = {
     VALIDATION_ERROR : 400,
     UNAUTHORIZED: 401,
