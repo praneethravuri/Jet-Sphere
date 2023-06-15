@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Flights = require("../models/flightsModel");
+const fs = require("fs");
 
 //@desc add flight details
 //@route POST /add-flights
@@ -7,58 +8,49 @@ const Flights = require("../models/flightsModel");
 // API URL - http://localhost:5000/add-flights
 
 const addFlights = asyncHandler(async (req, res) => {
-  const {
-    flightId,
-    airlineName,
-    source,
-    sourceIATA,
-    destination,
-    destinationIATA,
-    departureTime,
-    arrivalTime,
-    duration,
-  } = req.body;
+  const flightsData = fs.readFileSync(
+    __dirname + "/../data/flightDetails.json"
+  );
 
-  if (
-    !flightId ||
-    !airlineName ||
-    !source ||
-    !sourceIATA ||
-    !destination ||
-    !destinationIATA ||
-    !departureTime ||
-    !arrivalTime ||
-    !duration
-  ) {
-    res.status(400);
-    throw new Error("All fields are mandatory");
+  const flights = JSON.parse(flightsData);
+
+  //console.log(flights);
+
+  for (const flight of flights) {
+    const {
+      flightId,
+      airlineName,
+      source,
+      sourceIATA,
+      destination,
+      destinationIATA,
+      departureTime,
+      arrivalTime,
+      duration,
+    } = flight;
+
+    const searchFlight = await Flights.findOne({ flightId });
+
+    if (!searchFlight) {
+      await Flights.create({
+        flightId,
+        airlineName,
+        source,
+        sourceIATA,
+        destination,
+        destinationIATA,
+        departureTime,
+        arrivalTime,
+        duration,
+      });
+      console.log(`Flight: ${flightId} has been added to the database`);
+    }
+    else{
+      console.log(`Flight: ${flightId} is already present in the database`);
+    }
   }
 
-  const searchFlight = await Flights.findOne({ flightId });
-
-  if (searchFlight) {
-    res.status(400);
-    throw new Error("This flight is already present in the database");
-  }
-
-  const createFlight = await Flights.create({
-    flightId,
-    airlineName,
-    source,
-    sourceIATA,
-    destination,
-    destinationIATA,
-    departureTime,
-    arrivalTime,
-    duration,
-  });
-
-  if (createFlight) {
-    res.status(200).json({ message: "Added flight successfully" });
-  } else {
-    res.status(400);
-    throw new Error("Unable to add the flight");
-  }
+  res.status(200).json({ message: "Added flights successfully" });
 });
 
 module.exports = {

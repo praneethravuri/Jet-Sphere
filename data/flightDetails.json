@@ -1,0 +1,167 @@
+[
+  {
+    "flightId": "3Gx7P",
+    "airlineName": "Delta Airlines",
+    "source": "New York",
+    "sourceIATA": "JFK",
+    "destination": "Los Angeles",
+    "destinationIATA": "LAX",
+    "departureTime": "2023-06-15 08:30 AM",
+    "arrivalTime": "2023-06-15 11:45 AM",
+    "duration": "3 hours 15 minutes"
+  },
+  {
+    "flightId": "9Tb2Q",
+    "airlineName": "United Airlines",
+    "source": "Chicago",
+    "sourceIATA": "ORD",
+    "destination": "San Francisco",
+    "destinationIATA": "SFO",
+    "departureTime": "2023-06-15 12:15 PM",
+    "arrivalTime": "2023-06-15 03:45 PM",
+    "duration": "4 hours 30 minutes"
+  },
+  {
+    "flightId": "6Ma8F",
+    "airlineName": "British Airways",
+    "source": "London",
+    "sourceIATA": "LHR",
+    "destination": "Paris",
+    "destinationIATA": "CDG",
+    "departureTime": "2023-06-15 10:00 AM",
+    "arrivalTime": "2023-06-15 11:30 AM",
+    "duration": "1 hour 30 minutes"
+  },
+  {
+    "flightId": "2Tc6N",
+    "airlineName": "Emirates",
+    "source": "Dubai",
+    "sourceIATA": "DXB",
+    "destination": "Sydney",
+    "destinationIATA": "SYD",
+    "departureTime": "2023-06-15 06:45 PM",
+    "arrivalTime": "2023-06-16 08:30 AM",
+    "duration": "14 hours 45 minutes"
+  },
+  {
+    "flightId": "5Kd9R",
+    "airlineName": "Singapore Airlines",
+    "source": "Singapore",
+    "sourceIATA": "SIN",
+    "destination": "Tokyo",
+    "destinationIATA": "HND",
+    "departureTime": "2023-06-15 09:00 PM",
+    "arrivalTime": "2023-06-16 05:30 AM",
+    "duration": "7 hours 30 minutes"
+  },
+  {
+    "flightId": "4Rw5J",
+    "airlineName": "Qantas Airways",
+    "source": "Sydney",
+    "sourceIATA": "SYD",
+    "destination": "Melbourne",
+    "destinationIATA": "MEL",
+    "departureTime": "2023-06-15 09:45 AM",
+    "arrivalTime": "2023-06-15 11:00 AM",
+    "duration": "1 hour 15 minutes"
+  },
+  {
+    "flightId": "1Fh3K",
+    "airlineName": "Air France",
+    "source": "Paris",
+    "sourceIATA": "CDG",
+    "destination": "Rome",
+    "destinationIATA": "FCO",
+    "departureTime": "2023-06-15 02:30 PM",
+    "arrivalTime": "2023-06-15 04:15 PM",
+    "duration": "1 hour 45 minutes"
+  },
+  {
+    "flightId": "7Tg2S",
+    "airlineName": "Lufthansa",
+    "source": "Frankfurt",
+    "sourceIATA": "FRA",
+    "destination": "Madrid",
+    "destinationIATA": "MAD",
+    "departureTime": "2023-06-15 11:00 AM",
+    "arrivalTime": "2023-06-15 01:30 PM",
+    "duration": "2 hours 30 minutes"
+  },
+  {
+    "flightId": "2Dj4Q",
+    "airlineName": "American Airlines",
+    "source": "Miami",
+    "sourceIATA": "MIA",
+    "destination": "Dallas",
+    "destinationIATA": "DFW",
+    "departureTime": "2023-06-15 05:00 PM",
+    "arrivalTime": "2023-06-15 07:30 PM",
+    "duration": "2 hours 30 minutes"
+  },
+  {
+    "flightId": "9Hk6L",
+    "airlineName": "Cathay Pacific",
+    "source": "Hong Kong",
+    "sourceIATA": "HKG",
+    "destination": "Singapore",
+    "destinationIATA": "SIN",
+    "departureTime": "2023-06-15 08:15 AM",
+    "arrivalTime": "2023-06-15 12:00 PM",
+    "duration": "3 hours 45 minutes"
+  },
+  {
+    "flightId": "3Gx2P",
+    "airlineName": "Delta Airlines",
+    "source": "Los Angeles",
+    "sourceIATA": "LAX",
+    "destination": "New York",
+    "destinationIATA": "JFK",
+    "departureTime": "2023-06-15 01:30 PM",
+    "arrivalTime": "2023-06-15 04:45 PM",
+    "duration": "3 hours 15 minutes"
+  },
+  {
+    "flightId": "9Tb7Q",
+    "airlineName": "United Airlines",
+    "source": "San Francisco",
+    "sourceIATA": "SFO",
+    "destination": "Chicago",
+    "destinationIATA": "ORD",
+    "departureTime": "2023-06-15 05:15 PM",
+    "arrivalTime": "2023-06-15 08:45 PM",
+    "duration": "4 hours 30 minutes"
+  },
+  {
+    "flightId": "6Ma5F",
+    "airlineName": "British Airways",
+    "source": "Paris",
+    "sourceIATA": "CDG",
+    "destination": "London",
+    "destinationIATA": "LHR",
+    "departureTime": "2023-06-15 12:30 PM",
+    "arrivalTime": "2023-06-15 02:00 PM",
+    "duration": "1 hour 30 minutes"
+  },
+  {
+    "flightId": "2Tc9N",
+    "airlineName": "Emirates",
+    "source": "Sydney",
+    "sourceIATA": "SYD",
+    "destination": "Dubai",
+    "destinationIATA": "DXB",
+    "departureTime": "2023-06-15 09:45 PM",
+    "arrivalTime": "2023-06-16 11:30 AM",
+    "duration": "14 hours 45 minutes"
+  },
+  {
+    "flightId": "5Kd2R",
+    "airlineName": "Singapore Airlines",
+    "source": "Tokyo",
+    "sourceIATA": "HND",
+    "destination": "Singapore",
+    "destinationIATA": "SIN",
+    "departureTime": "2023-06-15 07:30 PM",
+    "arrivalTime": "2023-06-16 04:00 AM",
+    "duration": "8 hours 30 minutes"
+  }
+]
