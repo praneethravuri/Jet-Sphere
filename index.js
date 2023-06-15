@@ -10,14 +10,14 @@ connectDB();
 const app = express();
 
 // Set EJS as the view engine
-app.set("view engine", "ejs"); 
+app.set("view engine", "ejs");
 
 const port = process.env.PORT || 8000;
 
 // parse json
 app.use(express.json());
 // parse the request body
-app.use(express.urlencoded({ extended: true })); 
+app.use(express.urlencoded({ extended: true }));
 // use the express async handler
 app.use(errorHandler);
 
@@ -33,14 +33,12 @@ app.use("/homepage", require("./routes/homepageRoute"));
 // search flights route
 app.use("/search-flights", require("./routes/searchFlightsRoute"));
 
-
 // when the localhost is entered in the browser, automatically redirect to /login
 app.get("/", (req, res) => {
-  res.redirect("/login");
+    res.redirect("/login");
 });
-
 
 // listen to port
 app.listen(port, () => {
-  console.log(`Server is running on port: ${port}`);
+    console.log(`Server is running on port: ${port}`);
 });
