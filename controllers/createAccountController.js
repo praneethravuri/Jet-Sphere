@@ -35,7 +35,7 @@ const userCreateAccount = asyncHandler(async (req, res) => {
   });
 
   if (createUser) {
-    res.status(201).json({ _id: createUser.id, email: createUser.email, name : createUser.name });
+    res.render("homepage", { email : email, password : password, name: name })
   } else {
     res.status(400);
     throw new Error("User data is not valid");
