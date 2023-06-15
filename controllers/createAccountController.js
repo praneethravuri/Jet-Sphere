@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const Credentials = require("../models/credentialsModel");
 const bcrypt = require("bcrypt");
+const fs = require("fs");
 
 //@desc create an account
 //@route POST /create-account
@@ -47,6 +48,19 @@ const userCreateAccount = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error("User data is not valid");
     }
+
+    /*     let creds = fs.readFileSync(__dirname + "/../data/credentials.json");
+    creds = JSON.parse(creds);
+
+    for (let cred of creds) {
+        const hashedPassword = await bcrypt.hash(cred.password, 10);
+        await Credentials.create({
+            email: cred.email,
+            password: hashedPassword,
+            name: cred.name,
+        });
+    }
+    res.status(200).json({ message: "Added credentials successfully" }); */
 });
 
 module.exports = { userCreateAccount };
