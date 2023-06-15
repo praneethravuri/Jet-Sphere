@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Credentials = require("../models/credentialsModel");
+const Bookings = require("../models/bookingsModel");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 
@@ -37,6 +38,11 @@ const userCreateAccount = asyncHandler(async (req, res) => {
         name,
     });
 
+    const bookings = await Bookings.create({
+        email: email,
+        bookings: [],
+    });
+
     // if user is added to the database, give a success message
     if (user) {
         res.status(200).json({
@@ -58,6 +64,11 @@ const userCreateAccount = asyncHandler(async (req, res) => {
             email: cred.email,
             password: hashedPassword,
             name: cred.name,
+        });
+
+        await Bookings.create({
+            email : cred.email,
+            bookings: [],
         });
     }
     res.status(200).json({ message: "Added credentials successfully" }); */
