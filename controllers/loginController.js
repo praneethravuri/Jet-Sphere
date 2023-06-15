@@ -2,11 +2,13 @@ const asyncHandler = require("express-async-handler");
 const Credentials = require("../models/credentialsModel");
 const bcrypt = require("bcrypt");
 
-const userLogin = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
+//@desc login to homepage
+//@route POST /login
+//@access Public
+// API URL - http://localhost:5000/login
 
-  console.log(email);
-  console.log(password);
+const userLogin = asyncHandler(async (req, res) => {
+  const { email, password} = req.body;
 
   const credentials = await Credentials.findOne({ email });
 
@@ -18,8 +20,8 @@ const userLogin = asyncHandler(async (req, res) => {
 
     if (isPasswordMatch) {
       // Login successful
-      console.log("login success");
-      res.render("homepage", { email : email, password : password });
+
+      res.render("homepage", { email : email, password : password, name: credentials.name });
     } else {
       // Invalid email or password
       res.render("index", { errorMessage: "Invalid email or password", successMessage: "" });
