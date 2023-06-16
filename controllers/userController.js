@@ -169,4 +169,9 @@ const userUpdate = asyncHandler(async (req, res) => {
     }
 });
 
+//@desc update account details
+//@route PATCH /update-account
+//@access Private
+// API URL - http://localhost:5000/update-account
+
 module.exports = { userRegister, userLogin, userUpdate };

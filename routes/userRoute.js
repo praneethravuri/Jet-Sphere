@@ -7,6 +7,6 @@ const { userLogin, userRegister, userUpdate } = require("../controllers/userCont
 
 router.route("/register").post(userRegister);
 router.route("/login").post(userLogin);
-router.route("/update-account").post(userUpdate);
+router.route("/update-account").patch(userUpdate);
 
 module.exports = router;
