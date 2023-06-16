@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Flights = require("../models/flightsModel");
+const Bookings = require("../models/bookingsModel");
 
 //@desc homepage
 //@route POST /homepage

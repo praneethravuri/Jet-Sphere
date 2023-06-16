@@ -22,10 +22,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(errorHandler);
 
 // routes
-// login route
-app.use("/login", require("./routes/loginRoute"));
-// create account route
-app.use("/create-account", require("./routes/createAccountRoute"));
+// login and register route
+app.use("/", require("./routes/userRoute"));
 //add flights to the database route
 app.use("/add-flights", require("./routes/addFlightsRoute"));
 // homepage route

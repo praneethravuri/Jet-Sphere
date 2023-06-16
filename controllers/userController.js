@@ -9,7 +9,7 @@ const fs = require("fs");
 //@access Public
 // API URL - http://localhost:5000/create-account
 
-const userCreateAccount = asyncHandler(async (req, res) => {
+const userRegister = asyncHandler(async (req, res) => {
     // get the email, password, name from the json object
     const { email, password, name } = req.body;
 
@@ -38,7 +38,7 @@ const userCreateAccount = asyncHandler(async (req, res) => {
         name,
     });
 
-    const bookings = await Bookings.create({
+    await Bookings.create({
         email: email,
         bookings: [],
     });
@@ -46,7 +46,7 @@ const userCreateAccount = asyncHandler(async (req, res) => {
     // if user is added to the database, give a success message
     if (user) {
         res.status(200).json({
-            message: "Added information to credentials successfully",
+            message: "Account registered successfully",
         });
     }
     // if an error occurs while added the user to the database, throw an error
@@ -74,4 +74,44 @@ const userCreateAccount = asyncHandler(async (req, res) => {
     res.status(200).json({ message: "Added credentials successfully" }); */
 });
 
-module.exports = { userCreateAccount };
+//@desc login to homepage
+//@route POST /login
+//@access Public
+// API URL - http://localhost:5000/login
+
+const userLogin = asyncHandler(async (req, res) => {
+    // request the email and password from the json file
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        res.status(400);
+        throw new Error("All fields are mandatory");
+    }
+
+    // find if the user with the email provided is in the credentials database
+    const user = await Credentials.findOne({ email });
+
+    // if the user's email is not present in the database, throw an error
+    if (!user) {
+        res.status(400);
+        throw new Error(`An account is not associated with ${email}`);
+    }
+    // if the user with the provided email is present in the credentials database,
+    // check if the password provided matches with the password in the database
+    // the password in the database is un-hashed and compared
+    else {
+        // comparing the hashed password with the provided password
+        const isPasswordMatch = await bcrypt.compare(password, user.password);
+
+        if (isPasswordMatch) {
+            // Login successful
+            res.status(200).json({ message: "Login successful", name : user.name });
+        } else {
+            // Invalid password
+            res.status(400);
+            throw new Error("Invalid password");
+        }
+    }
+});
+
+module.exports = { userRegister, userLogin };
