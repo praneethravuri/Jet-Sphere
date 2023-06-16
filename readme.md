@@ -1,15 +1,19 @@
 # Jet Sphere
 
-A full-stack web application to book and manage flight tickets
+A full-stack web application with JWT user authentication and validation, manage flight bookings, update / delete account, administrative database changes, and session management
 
-Tech Stack
-1. HTML
-2. CSS
-3. Javascript
-4. JQuery
-5. Sass
-6. EJS
-7. NodeJS
-8. ExpressJS
-9. MongoDB / Mongoose
+## Project Setup
+
+Install packages
+
+`npm i bcrypt dotenv ejs express express-async-handler express-session mongoose`
+
+Dev Dependency
+
+`npm i --save-dev nodemon`
+
+Starting the application
+
+1. Add `"start": "nodemon index.js"` in the `Scripts` tag of `package.json`
+2. In the terminal, run `npm start`
 
