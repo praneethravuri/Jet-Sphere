@@ -105,7 +105,10 @@ const userLogin = asyncHandler(async (req, res) => {
 
         if (isPasswordMatch) {
             // Login successful
-            res.status(200).json({ message: "Login successful", name : user.name });
+            res.status(200).json({
+                message: "Login successful",
+                name: user.name,
+            });
         } else {
             // Invalid password
             res.status(400);
@@ -114,4 +117,56 @@ const userLogin = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { userRegister, userLogin };
+//@desc update account details
+//@route PATCH /update-account
+//@access Private
+// API URL - http://localhost:5000/update-account
+
+const userUpdate = asyncHandler(async (req, res) => {
+    const { name, password, email } = req.body;
+
+    if (name) {
+        // Find the user by email
+        const user = await Credentials.findOne({ email });
+
+        if (!user) {
+            res.status(400);
+            throw new Error(
+                `Unable to find email ${email} associated with ${name}`
+            );
+        }
+
+        // Update the user's name
+        user.name = name;
+        await user.save();
+
+        res.status(200).json({ message: "Name updated successfully" });
+    }
+
+    if (password) {
+        // Find the user by email
+        const user = await Credentials.findOne({ email });
+
+        if (!user) {
+            res.status(400);
+            throw new Error(`Unable to find email ${email}`);
+        }
+
+        // Hash the new password
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Update the user's password
+        user.password = hashedPassword;
+        await user.save();
+
+        res.status(200).json({ message: "Password updated successfully" });
+    }
+
+    // If neither name nor password is provided in the request body
+    if (!name && !password) {
+        res.status(400);
+        throw new Error("Please provide a name or password to update");
+    }
+});
+
+module.exports = { userRegister, userLogin, userUpdate };

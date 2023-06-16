@@ -22,9 +22,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(errorHandler);
 
 // routes
-// login and register route
+// login, register, update route
 app.use("/", require("./routes/userRoute"));
-//add flights to the database route
+//add and search flights route
 app.use("/", require("./routes/flightsRoute"));
 // homepage route
 app.use("/homepage", require("./routes/homepageRoute"));
