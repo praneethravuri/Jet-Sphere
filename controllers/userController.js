@@ -3,6 +3,7 @@ const Credentials = require("../models/credentialsModel");
 const Bookings = require("../models/bookingsModel");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
+const { error } = require("console");
 
 //@desc create an account
 //@route POST /create-account
@@ -169,9 +170,31 @@ const userUpdate = asyncHandler(async (req, res) => {
     }
 });
 
-//@desc update account details
-//@route PATCH /update-account
+//@desc delete account
+//@route DELETE /delete-account
 //@access Private
-// API URL - http://localhost:5000/update-account
+// API URL - http://localhost:5000/delete-account
 
-module.exports = { userRegister, userLogin, userUpdate };
+const userDelete = asyncHandler(async (req, res) => {
+    const { email } = req.body;
+
+    if (!email) {
+        res.status(400);
+        throw new Error("All fields are mandatory");
+    }
+
+    const user = await Credentials.findOne({ email });
+
+    if (!user) {
+        res.status(400);
+        throw new Error(`${email} is not present in the database`);
+    }
+
+    await Credentials.deleteOne({ email });
+
+    res.status(200).json({
+        message: `${email} has been deleted from the database`,
+    });
+});
+
+module.exports = { userRegister, userLogin, userUpdate, userDelete };
