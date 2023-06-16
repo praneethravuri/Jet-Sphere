@@ -21,39 +21,34 @@ const addFlights = asyncHandler(async (req, res) => {
     for (const flight of flights) {
         const {
             flightId,
-            airlineName,
             sourceCity,
             sourceCountry,
             sourceIATA,
             destinationCity,
             destinationCountry,
             destinationIATA,
-            departureTime,
-            arrivalTime,
             duration,
         } = flight;
 
         if (flightIdArray.includes(flightId)) {
-            console.log(`Duplicate flight : ${flightId}`);
+            console.log(`Duplicate flight: ${flightId}`);
+            continue;
         }
 
         flightIdArray.push(flightId);
 
         // find the flight details using the flightId
-        const searchFlight = await Flights.findOne({ flightId });
+        const existingFlight = await Flights.findOne({ flightId });
 
-        if (!searchFlight && !flightIdArray.includes(flightId)) {
+        if (!existingFlight) {
             await Flights.create({
                 flightId,
-                airlineName,
                 sourceCity,
                 sourceCountry,
                 sourceIATA: sourceIATA.toUpperCase(),
                 destinationCity,
                 destinationCountry,
                 destinationIATA: destinationIATA.toUpperCase(),
-                departureTime,
-                arrivalTime,
                 duration,
             });
             console.log(`Flight: ${flightId} has been added to the database`);
@@ -63,6 +58,7 @@ const addFlights = asyncHandler(async (req, res) => {
             );
         }
     }
+
     console.log("Flights have been processed");
     res.status(200).json({ message: "Flights have been processed" });
 });
@@ -71,13 +67,12 @@ const addFlights = asyncHandler(async (req, res) => {
 //@route POST /search-flights
 //@access Public
 // API URL - http://localhost:5000/search-flights
-
 const searchFlights = asyncHandler(async (req, res) => {
-    // request the sourceIATA and destinationIATA codes from the json body
-    const { sourceIATA, destinationIATA } = req.body;
+    // request the sourceIATA and destinationIATA codes from the JSON body
+    const { sourceIATA, destinationIATA, returnTicket } = req.body;
 
     // throw an error if any of the fields are empty
-    if (!sourceIATA || !destinationIATA) {
+    if (!sourceIATA || !destinationIATA || !returnTicket) {
         res.status(400);
         throw new Error("All fields are mandatory");
     }
@@ -88,17 +83,26 @@ const searchFlights = asyncHandler(async (req, res) => {
         destinationIATA,
     });
 
-    // if an associated flight is not found, throw an error
-    if (!flight) {
+    if (flight) {
+        if (returnTicket === "yes") {
+            const returnFlight = await Flights.find({
+                sourceIATA: destinationIATA,
+                destinationIATA: sourceIATA,
+            });
+
+            res.status(200).json({
+                flight: flight,
+                returnFlight: returnFlight,
+            });
+        } else if (returnTicket === "no") {
+            res.status(200).json({
+                flight: flight,
+            });
+        }
+    } else {
         res.status(400);
         throw new Error("No flight available");
     }
-
-    // if a flight is found, return the flight details
-    res.status(200).json({
-        message: "Found flight details successfully",
-        flight: flight,
-    });
 });
 
 module.exports = {

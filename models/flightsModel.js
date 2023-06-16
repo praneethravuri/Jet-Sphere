@@ -14,8 +14,6 @@ const mongoose = require("mongoose");
   "destinationCity": "London",
   "destinationCountry": "United Kingdom",
   "destinationIATA": "LHR",
-  "departureTime": "2023-06-15 06:30 AM",
-  "arrivalTime": "2023-06-15 10:45 AM",
   "duration": "7 hours 15 minutes",
   "createdAt": {
     "$date": "2023-06-15T09:12:31.699Z"
@@ -28,55 +26,43 @@ const mongoose = require("mongoose");
 */
 
 const flightsSchema = mongoose.Schema(
-  {
-    flightId: {
-      type: String,
-      required: [true, "Please add the flightId"],
+    {
+        flightId: {
+            type: String,
+            required: [true, "Please add the flightId"],
+        },
+        sourceCity: {
+            type: String,
+            required: [true, "Please enter the source city"],
+        },
+        sourceCountry: {
+            type: String,
+            required: [true, "Please enter the source country"],
+        },
+        sourceIATA: {
+            type: String,
+            required: [true, "Please enter the source iata"],
+        },
+        destinationCity: {
+            type: String,
+            required: [true, "Please enter the destination city"],
+        },
+        destinationCountry: {
+            type: "String",
+            required: [true, "Please enter the destination country"],
+        },
+        destinationIATA: {
+            type: String,
+            required: [true, "Please enter the destination iata"],
+        },
+        duration: {
+            type: String,
+            required: [true, "Please enter the duration"],
+        },
     },
-    airlineName: {
-      type: String,
-      required: [true, "Please add the airlineName"],
-    },
-    sourceCity: {
-      type: String,
-      required: [true, "Please enter the source city"],
-    },
-    sourceCountry: {
-      type: String,
-      required: [true, "Please enter the source country"],
-    },
-    sourceIATA: {
-      type: String,
-      required: [true, "Please enter the source iata"],
-    },
-    destinationCity: {
-      type: String,
-      required: [true, "Please enter the destination city"],
-    },
-    destinationCountry: {
-      type: "String",
-      required: [true, "Please enter the destination country"],
-    },
-    destinationIATA: {
-      type: String,
-      required: [true, "Please enter the destination iata"],
-    },
-    departureTime: {
-      type: String,
-      required: [true, "Please enter the departureTime"],
-    },
-    arrivalTime: {
-      type: String,
-      required: [true, "Please enter the arrivalTime"],
-    },
-    duration: {
-      type: String,
-      required: [true, "Please enter the duration"],
-    },
-  },
-  {
-    timestamps: true,
-  }
+    {
+        timestamps: true,
+    }
 );
 
 module.exports = mongoose.model("Flights", flightsSchema);

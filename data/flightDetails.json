@@ -1,813 +1,862 @@
 [
     {
         "flightId": "4Gh7S",
-        "airlineName": "Emirates",
         "sourceCity": "Dubai",
         "sourceCountry": "United Arab Emirates",
         "sourceIATA": "DXB",
         "destinationCity": "London",
         "destinationCountry": "United Kingdom",
         "destinationIATA": "LHR",
-        "departureTime": "2023-06-15 06:30",
-        "arrivalTime": "2023-06-15 10:45",
         "duration": "7 hours 15 minutes"
     },
     {
         "flightId": "9Mj3T",
-        "airlineName": "Singapore Airlines",
+
         "sourceCity": "Singapore",
         "sourceCountry": "Singapore",
         "sourceIATA": "SIN",
         "destinationCity": "Tokyo",
         "destinationCountry": "Japan",
         "destinationIATA": "NRT",
-        "departureTime": "2023-06-15 14:15",
-        "arrivalTime": "2023-06-15 19:30",
         "duration": "6 hours 15 minutes"
     },
     {
         "flightId": "1Kl4U",
-        "airlineName": "British Airways",
+
         "sourceCity": "London",
         "sourceCountry": "United Kingdom",
         "sourceIATA": "LHR",
         "destinationCity": "New York",
         "destinationCountry": "United States",
         "destinationIATA": "JFK",
-        "departureTime": "2023-06-15 09:00",
-        "arrivalTime": "2023-06-15 14:30",
         "duration": "8 hours 30 minutes"
     },
     {
         "flightId": "3Nd5R",
-        "airlineName": "Qatar Airways",
+
         "sourceCity": "Doha",
         "sourceCountry": "Qatar",
         "sourceIATA": "DOH",
         "destinationCity": "Sydney",
         "destinationCountry": "Australia",
         "destinationIATA": "SYD",
-        "departureTime": "2023-06-15 20:45",
-        "arrivalTime": "2023-06-16 10:30",
         "duration": "14 hours 45 minutes"
     },
     {
         "flightId": "8Pl6W",
-        "airlineName": "Air Canada",
+
         "sourceCity": "Toronto",
         "sourceCountry": "Canada",
         "sourceIATA": "YYZ",
         "destinationCity": "Vancouver",
         "destinationCountry": "Canada",
         "destinationIATA": "YVR",
-        "departureTime": "2023-06-15 12:30",
-        "arrivalTime": "2023-06-15 14:45",
         "duration": "5 hours 15 minutes"
     },
     {
         "flightId": "5Hj9T",
-        "airlineName": "Delta Air Lines",
+
         "sourceCity": "New York",
         "sourceCountry": "United States",
         "sourceIATA": "JFK",
         "destinationCity": "Los Angeles",
         "destinationCountry": "United States",
         "destinationIATA": "LAX",
-        "departureTime": "2023-06-15 08:00",
-        "arrivalTime": "2023-06-15 11:30",
         "duration": "5 hours 30 minutes"
     },
     {
         "flightId": "2Wk5G",
-        "airlineName": "Lufthansa",
+
         "sourceCity": "Frankfurt",
         "sourceCountry": "Germany",
         "sourceIATA": "FRA",
         "destinationCity": "Paris",
         "destinationCountry": "France",
         "destinationIATA": "CDG",
-        "departureTime": "2023-06-15 14:45",
-        "arrivalTime": "2023-06-15 16:15",
         "duration": "1 hour 30 minutes"
     },
     {
         "flightId": "4Hj7D",
-        "airlineName": "Air India",
+
         "sourceCity": "Mumbai",
         "sourceCountry": "India",
         "sourceIATA": "BOM",
         "destinationCity": "Delhi",
         "destinationCountry": "India",
         "destinationIATA": "DEL",
-        "departureTime": "2023-06-15 06:30",
-        "arrivalTime": "2023-06-15 08:45",
         "duration": "2 hours 15 minutes"
     },
     {
         "flightId": "3Jk6F",
-        "airlineName": "Cathay Pacific",
+
         "sourceCity": "Hong Kong",
         "sourceCountry": "Hong Kong",
         "sourceIATA": "HKG",
         "destinationCity": "Bangkok",
         "destinationCountry": "Thailand",
         "destinationIATA": "BKK",
-        "departureTime": "2023-06-15 13:15",
-        "arrivalTime": "2023-06-15 15:00",
         "duration": "2 hours 45 minutes"
     },
     {
         "flightId": "9Lm3B",
-        "airlineName": "Qantas Airways",
+
         "sourceCity": "Sydney",
         "sourceCountry": "Australia",
         "sourceIATA": "SYD",
         "destinationCity": "Auckland",
         "destinationCountry": "New Zealand",
         "destinationIATA": "AKL",
-        "departureTime": "2023-06-15 10:30",
-        "arrivalTime": "2023-06-15 16:45",
         "duration": "3 hours 15 minutes"
     },
     {
         "flightId": "7Rn4J",
-        "airlineName": "Emirates",
+
         "sourceCity": "Dubai",
         "sourceCountry": "United Arab Emirates",
         "sourceIATA": "DXB",
         "destinationCity": "Singapore",
         "destinationCountry": "Singapore",
         "destinationIATA": "SIN",
-        "departureTime": "2023-06-15 19:00",
-        "arrivalTime": "2023-06-16 01:30",
         "duration": "7 hours 30 minutes"
     },
     {
         "flightId": "6Km5N",
-        "airlineName": "Air France",
+
         "sourceCity": "Paris",
         "sourceCountry": "France",
         "sourceIATA": "CDG",
         "destinationCity": "Rome",
         "destinationCountry": "Italy",
         "destinationIATA": "FCO",
-        "departureTime": "2023-06-15 09:45",
-        "arrivalTime": "2023-06-15 11:30",
         "duration": "1 hour 45 minutes"
     },
     {
         "flightId": "8Qn2P",
-        "airlineName": "United Airlines",
+
         "sourceCity": "Chicago",
         "sourceCountry": "United States",
         "sourceIATA": "ORD",
         "destinationCity": "Houston",
         "destinationCountry": "United States",
         "destinationIATA": "IAH",
-        "departureTime": "2023-06-15 12:15",
-        "arrivalTime": "2023-06-15 14:30",
         "duration": "2 hours 15 minutes"
     },
     {
         "flightId": "1Tm4S",
-        "airlineName": "Qatar Airways",
+
         "sourceCity": "Doha",
         "sourceCountry": "Qatar",
         "sourceIATA": "DOH",
         "destinationCity": "New York",
         "destinationCountry": "United States",
         "destinationIATA": "JFK",
-        "departureTime": "2023-06-15 20:30",
-        "arrivalTime": "2023-06-16 07:00",
         "duration": "12 hours 30 minutes"
     },
     {
         "flightId": "2Gn7M",
-        "airlineName": "Singapore Airlines",
+
         "sourceCity": "Singapore",
         "sourceCountry": "Singapore",
         "sourceIATA": "SIN",
         "destinationCity": "Sydney",
         "destinationCountry": "Australia",
         "destinationIATA": "SYD",
-        "departureTime": "2023-06-15 11:45",
-        "arrivalTime": "2023-06-15 18:00",
         "duration": "7 hours 15 minutes"
     },
     {
         "flightId": "5Rj6S",
-        "airlineName": "Emirates",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Dubai",
         "destinationCountry": "United Arab Emirates",
         "destinationIATA": "DXB",
-        "departureTime": "2023-06-15 06:30",
-        "arrivalTime": "2023-06-15 10:45",
         "duration": "7 hours 15 minutes"
     },
     {
         "flightId": "5Rj7S",
-        "airlineName": "Emirates",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Dubai",
         "destinationCountry": "United Arab Emirates",
         "destinationIATA": "DXB",
-        "departureTime": "2023-06-15 06:30",
-        "arrivalTime": "2023-06-15 10:45",
         "duration": "7 hours 15 minutes"
     },
     {
         "flightId": "9Jm5T",
-        "airlineName": "Singapore Airlines",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Singapore",
         "destinationCountry": "Singapore",
         "destinationIATA": "SIN",
-        "departureTime": "2023-06-15 14:15",
-        "arrivalTime": "2023-06-15 19:30",
         "duration": "6 hours 15 minutes"
     },
     {
         "flightId": "1Ql8U",
-        "airlineName": "British Airways",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "London",
         "destinationCountry": "United Kingdom",
         "destinationIATA": "LHR",
-        "departureTime": "2023-06-15 09:00",
-        "arrivalTime": "2023-06-15 14:30",
         "duration": "8 hours 30 minutes"
     },
     {
         "flightId": "3Hd9R",
-        "airlineName": "Qatar Airways",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Doha",
         "destinationCountry": "Qatar",
         "destinationIATA": "DOH",
-        "departureTime": "2023-06-15 20:45",
-        "arrivalTime": "2023-06-16 10:30",
         "duration": "14 hours 45 minutes"
     },
     {
         "flightId": "8Nl6W",
-        "airlineName": "Air Canada",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Toronto",
         "destinationCountry": "Canada",
         "destinationIATA": "YYZ",
-        "departureTime": "2023-06-15 12:30",
-        "arrivalTime": "2023-06-15 14:45",
         "duration": "5 hours 15 minutes"
     },
     {
         "flightId": "6Tj9D",
-        "airlineName": "Delta Air Lines",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "New York",
         "destinationCountry": "United States",
         "destinationIATA": "JFK",
-        "departureTime": "2023-06-15 08:00",
-        "arrivalTime": "2023-06-15 11:30",
         "duration": "5 hours 30 minutes"
     },
     {
         "flightId": "9Om3B",
-        "airlineName": "Qantas Airways",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Sydney",
         "destinationCountry": "Australia",
         "destinationIATA": "SYD",
-        "departureTime": "2023-06-15 10:30",
-        "arrivalTime": "2023-06-15 16:45",
         "duration": "3 hours 15 minutes"
     },
     {
         "flightId": "7Gh4K",
-        "airlineName": "American Airlines",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Los Angeles",
         "destinationCountry": "United States",
         "destinationIATA": "LAX",
-        "departureTime": "2023-06-15 16:30",
-        "arrivalTime": "2023-06-15 19:45",
         "duration": "15 hours 15 minutes"
     },
     {
         "flightId": "2Fr5H",
-        "airlineName": "Air France",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Paris",
         "destinationCountry": "France",
         "destinationIATA": "CDG",
-        "departureTime": "2023-06-15 11:45",
-        "arrivalTime": "2023-06-15 14:30",
         "duration": "9 hours 45 minutes"
     },
     {
         "flightId": "6Mn7J",
-        "airlineName": "Etihad Airways",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Abu Dhabi",
         "destinationCountry": "United Arab Emirates",
         "destinationIATA": "AUH",
-        "departureTime": "2023-06-15 18:15",
-        "arrivalTime": "2023-06-15 21:00",
         "duration": "6 hours 45 minutes"
     },
     {
         "flightId": "4Kl8S",
-        "airlineName": "Jet Airways",
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Mumbai",
         "destinationCountry": "India",
         "destinationIATA": "BOM",
-        "departureTime": "2023-06-15 15:30",
-        "arrivalTime": "2023-06-15 17:45",
         "duration": "2 hours 15 minutes"
     },
     {
         "flightId": "8Qp5F",
-        "airlineName": "Southwest Airlines",
+
         "sourceCity": "Hyderabad",
         "sourceCountry": "India",
         "sourceIATA": "HYD",
         "destinationCity": "Chicago",
         "destinationCountry": "United States",
         "destinationIATA": "ORD",
-        "departureTime": "2023-06-15 13:00",
-        "arrivalTime": "2023-06-15 16:15",
         "duration": "14 hours 15 minutes"
     },
     {
         "flightId": "3Qp9R",
-        "airlineName": "Qatar Airways",
+
         "sourceCity": "Doha",
         "sourceCountry": "Qatar",
         "sourceIATA": "DOH",
         "destinationCity": "Paris",
         "destinationCountry": "France",
         "destinationIATA": "CDG",
-        "departureTime": "2023-06-15 20:45",
-        "arrivalTime": "2023-06-16 10:30",
         "duration": "14 hours 45 minutes"
     },
 
     {
         "flightId": "6Rj9D",
-        "airlineName": "Delta Air Lines",
+
         "sourceCity": "New York",
         "sourceCountry": "United States",
         "sourceIATA": "JFK",
         "destinationCity": "Los Angeles",
         "destinationCountry": "United States",
         "destinationIATA": "LAX",
-        "departureTime": "2023-06-15 08:00",
-        "arrivalTime": "2023-06-15 11:30",
         "duration": "5 hours 30 minutes"
     },
 
     {
         "flightId": "4Hd7D",
-        "airlineName": "Air India",
+
         "sourceCity": "Mumbai",
         "sourceCountry": "India",
         "sourceIATA": "BOM",
         "destinationCity": "Delhi",
         "destinationCountry": "India",
         "destinationIATA": "DEL",
-        "departureTime": "2023-06-15 06:30",
-        "arrivalTime": "2023-06-15 08:45",
         "duration": "2 hours 15 minutes"
     },
     {
         "flightId": "3Ek6F",
-        "airlineName": "Cathay Pacific",
+
         "sourceCity": "Hong Kong",
         "sourceCountry": "Hong Kong",
         "sourceIATA": "HKG",
         "destinationCity": "Singapore",
         "destinationCountry": "Singapore",
         "destinationIATA": "SIN",
-        "departureTime": "2023-06-15 13:15",
-        "arrivalTime": "2023-06-15 15:00",
         "duration": "3 hours 45 minutes"
     },
     {
         "flightId": "7Yn2S",
-        "airlineName": "KLM Royal Dutch Airlines",
         "sourceCity": "Amsterdam",
         "sourceCountry": "Netherlands",
         "sourceIATA": "AMS",
         "destinationCity": "Madrid",
         "destinationCountry": "Spain",
         "destinationIATA": "MAD",
-        "departureTime": "2023-06-15 09:30",
-        "arrivalTime": "2023-06-15 12:00",
         "duration": "2 hours 30 minutes"
     },
     {
         "flightId": "5Pq4J",
-        "airlineName": "Qantas",
+
         "sourceCity": "Sydney",
         "sourceCountry": "Australia",
         "sourceIATA": "SYD",
         "destinationCity": "Melbourne",
         "destinationCountry": "Australia",
         "destinationIATA": "MEL",
-        "departureTime": "2023-06-15 11:45",
-        "arrivalTime": "2023-06-15 13:30",
         "duration": "1 hour 45 minutes"
     },
     {
         "flightId": "9Zr1L",
-        "airlineName": "Turkish Airlines",
+
         "sourceCity": "Istanbul",
         "sourceCountry": "Turkey",
         "sourceIATA": "IST",
         "destinationCity": "Athens",
         "destinationCountry": "Greece",
         "destinationIATA": "ATH",
-        "departureTime": "2023-06-15 16:00",
-        "arrivalTime": "2023-06-15 18:00",
         "duration": "2 hours"
     },
     {
         "flightId": "1Tg8N",
-        "airlineName": "ANA All Nippon Airways",
+
         "sourceCity": "Tokyo",
         "sourceCountry": "Japan",
         "sourceIATA": "HND",
         "destinationCity": "Osaka",
         "destinationCountry": "Japan",
         "destinationIATA": "KIX",
-        "departureTime": "2023-06-15 13:30",
-        "arrivalTime": "2023-06-15 15:00",
         "duration": "1 hour 30 minutes"
     },
 
     {
         "flightId": "8Tm6W",
-        "airlineName": "Air Canada",
+
         "sourceCity": "Toronto",
         "sourceCountry": "Canada",
         "sourceIATA": "YYZ",
         "destinationCity": "Vancouver",
         "destinationCountry": "Canada",
         "destinationIATA": "YVR",
-        "departureTime": "2023-06-15 12:30",
-        "arrivalTime": "2023-06-15 14:45",
         "duration": "5 hours 15 minutes"
     },
 
     {
         "flightId": "2Sk5G",
-        "airlineName": "Lufthansa",
+
         "sourceCity": "Frankfurt",
         "sourceCountry": "Germany",
         "sourceIATA": "FRA",
         "destinationCity": "Munich",
         "destinationCountry": "Germany",
         "destinationIATA": "MUC",
-        "departureTime": "2023-06-15 14:45",
-        "arrivalTime": "2023-06-15 16:15",
         "duration": "1 hour 30 minutes"
     },
 
     {
         "flightId": "9Wn4E",
-        "airlineName": "Air France",
+
         "sourceCity": "Paris",
         "sourceCountry": "France",
         "sourceIATA": "CDG",
         "destinationCity": "Rome",
         "destinationCountry": "Italy",
         "destinationIATA": "FCO",
-        "departureTime": "2023-06-15 09:30",
-        "arrivalTime": "2023-06-15 11:15",
         "duration": "1 hour 45 minutes"
     },
     {
         "flightId": "5Zb8L",
-        "airlineName": "American Airlines",
+
         "sourceCity": "Chicago",
         "sourceCountry": "United States",
         "sourceIATA": "ORD",
         "destinationCity": "Dallas",
         "destinationCountry": "United States",
         "destinationIATA": "DFW",
-        "departureTime": "2023-06-15 11:45",
-        "arrivalTime": "2023-06-15 13:30",
         "duration": "1 hour 45 minutes"
     },
     {
         "flightId": "8Xm2K",
-        "airlineName": "Etihad Airways",
+
         "sourceCity": "Abu Dhabi",
         "sourceCountry": "United Arab Emirates",
         "sourceIATA": "AUH",
         "destinationCity": "Mumbai",
         "destinationCountry": "India",
         "destinationIATA": "BOM",
-        "departureTime": "2023-06-15 16:00",
-        "arrivalTime": "2023-06-15 18:00",
         "duration": "2 hours"
     },
     {
         "flightId": "7Fp1J",
-        "airlineName": "Southwest Airlines",
+
         "sourceCity": "Los Angeles",
         "sourceCountry": "United States",
         "sourceIATA": "LAX",
         "destinationCity": "Las Vegas",
         "destinationCountry": "United States",
         "destinationIATA": "LAS",
-        "departureTime": "2023-06-15 13:30",
-        "arrivalTime": "2023-06-15 15:00",
         "duration": "1 hour 30 minutes"
     },
     {
         "flightId": "5Hj2A",
-        "airlineName": "Qantas",
+
         "sourceCity": "Sydney",
         "sourceCountry": "Australia",
         "sourceIATA": "SYD",
         "destinationCity": "Auckland",
         "destinationCountry": "New Zealand",
         "destinationIATA": "AKL",
-        "departureTime": "2023-06-15 08:30",
-        "arrivalTime": "2023-06-15 12:00",
         "duration": "3 hours 30 minutes"
     },
     {
         "flightId": "2Bn8F",
-        "airlineName": "United Airlines",
+
         "sourceCity": "Chicago",
         "sourceCountry": "United States",
         "sourceIATA": "ORD",
         "destinationCity": "San Francisco",
         "destinationCountry": "United States",
         "destinationIATA": "SFO",
-        "departureTime": "2023-06-15 10:45",
-        "arrivalTime": "2023-06-15 13:30",
         "duration": "4 hours 45 minutes"
     },
     {
         "flightId": "7Mg4T",
-        "airlineName": "Lufthansa",
+
         "sourceCity": "Berlin",
         "sourceCountry": "Germany",
         "sourceIATA": "TXL",
         "destinationCity": "Rome",
         "destinationCountry": "Italy",
         "destinationIATA": "FCO",
-        "departureTime": "2023-06-15 12:15",
-        "arrivalTime": "2023-06-15 14:30",
         "duration": "2 hours 15 minutes"
     },
     {
         "flightId": "4Nl9P",
-        "airlineName": "Air New Zealand",
+
         "sourceCity": "Auckland",
         "sourceCountry": "New Zealand",
         "sourceIATA": "AKL",
         "destinationCity": "Los Angeles",
         "destinationCountry": "United States",
         "destinationIATA": "LAX",
-        "departureTime": "2023-06-15 16:30",
-        "arrivalTime": "2023-06-15 08:45",
         "duration": "12 hours 15 minutes"
     },
     {
         "flightId": "1Zm3C",
-        "airlineName": "Emirates",
+
         "sourceCity": "Dubai",
         "sourceCountry": "United Arab Emirates",
         "sourceIATA": "DXB",
         "destinationCity": "Bangkok",
         "destinationCountry": "Thailand",
         "destinationIATA": "BKK",
-        "departureTime": "2023-06-15 15:00",
-        "arrivalTime": "2023-06-15 20:30",
         "duration": "6 hours 30 minutes"
     },
     {
         "flightId": "3Kl5X",
-        "airlineName": "Singapore Airlines",
+
         "sourceCity": "Singapore",
         "sourceCountry": "Singapore",
         "sourceIATA": "SIN",
         "destinationCity": "Sydney",
         "destinationCountry": "Australia",
         "destinationIATA": "SYD",
-        "departureTime": "2023-06-15 18:45",
-        "arrivalTime": "2023-06-15 23:30",
         "duration": "6 hours 45 minutes"
     },
     {
         "flightId": "9Bm7Q",
-        "airlineName": "British Airways",
+
         "sourceCity": "London",
         "sourceCountry": "United Kingdom",
         "sourceIATA": "LHR",
         "destinationCity": "Paris",
         "destinationCountry": "France",
         "destinationIATA": "CDG",
-        "departureTime": "2023-06-15 11:30",
-        "arrivalTime": "2023-06-15 13:15",
         "duration": "1 hour 45 minutes"
     },
     {
         "flightId": "6Fn2Y",
-        "airlineName": "American Airlines",
+
         "sourceCity": "New York",
         "sourceCountry": "United States",
         "sourceIATA": "JFK",
         "destinationCity": "Miami",
         "destinationCountry": "United States",
         "destinationIATA": "MIA",
-        "departureTime": "2023-06-15 09:15",
-        "arrivalTime": "2023-06-15 11:00",
         "duration": "1 hour 45 minutes"
     },
     {
         "flightId": "8Hj1Z",
-        "airlineName": "Delta Air Lines",
+
         "sourceCity": "Atlanta",
         "sourceCountry": "United States",
         "sourceIATA": "ATL",
         "destinationCity": "Orlando",
         "destinationCountry": "United States",
         "destinationIATA": "MCO",
-        "departureTime": "2023-06-15 13:00",
-        "arrivalTime": "2023-06-15 14:30",
         "duration": "1 hour 30 minutes"
     },
     {
         "flightId": "7Rm4X",
-        "airlineName": "Qatar Airways",
+
         "sourceCity": "Doha",
         "sourceCountry": "Qatar",
         "sourceIATA": "DOH",
         "destinationCity": "Mumbai",
         "destinationCountry": "India",
         "destinationIATA": "BOM",
-        "departureTime": "2023-06-15 17:30",
-        "arrivalTime": "2023-06-15 20:45",
         "duration": "3 hours 15 minutes"
     },
     {
         "flightId": "5Rp3X",
-        "airlineName": "Air France",
+
         "sourceCity": "Paris",
         "sourceCountry": "France",
         "sourceIATA": "CDG",
         "destinationCity": "Tokyo",
         "destinationCountry": "Japan",
         "destinationIATA": "NRT",
-        "departureTime": "2023-06-15 09:30",
-        "arrivalTime": "2023-06-15 16:45",
         "duration": "12 hours 15 minutes"
     },
     {
         "flightId": "9Ws4B",
-        "airlineName": "Qantas",
+
         "sourceCity": "Sydney",
         "sourceCountry": "Australia",
         "sourceIATA": "SYD",
         "destinationCity": "Los Angeles",
         "destinationCountry": "United States",
         "destinationIATA": "LAX",
-        "departureTime": "2023-06-15 12:45",
-        "arrivalTime": "2023-06-15 08:30",
         "duration": "13 hours 45 minutes"
     },
     {
         "flightId": "3Tl2C",
-        "airlineName": "Lufthansa",
+
         "sourceCity": "Frankfurt",
         "sourceCountry": "Germany",
         "sourceIATA": "FRA",
         "destinationCity": "Tokyo",
         "destinationCountry": "Japan",
         "destinationIATA": "NRT",
-        "departureTime": "2023-06-15 11:15",
-        "arrivalTime": "2023-06-15 18:30",
         "duration": "6 hours 15 minutes"
     },
     {
         "flightId": "1Ym8D",
-        "airlineName": "Emirates",
+
         "sourceCity": "London",
         "sourceCountry": "United Kingdom",
         "sourceIATA": "LHR",
         "destinationCity": "New York",
         "destinationCountry": "United States",
         "destinationIATA": "JFK",
-        "departureTime": "2023-06-15 14:00",
-        "arrivalTime": "2023-06-15 20:15",
         "duration": "14 hours 15 minutes"
     },
     {
         "flightId": "7Hn6S",
-        "airlineName": "British Airways",
+
         "sourceCity": "London",
         "sourceCountry": "United Kingdom",
         "sourceIATA": "LHR",
         "destinationCity": "Cape Town",
         "destinationCountry": "South Africa",
         "destinationIATA": "CPT",
-        "departureTime": "2023-06-15 10:30",
-        "arrivalTime": "2023-06-15 19:45",
         "duration": "11 hours 15 minutes"
     },
     {
         "flightId": "4Gq9Z",
-        "airlineName": "Singapore Airlines",
+
         "sourceCity": "Singapore",
         "sourceCountry": "Singapore",
         "sourceIATA": "SIN",
         "destinationCity": "Sydney",
         "destinationCountry": "Australia",
         "destinationIATA": "SYD",
-        "departureTime": "2023-06-15 16:15",
-        "arrivalTime": "2023-06-15 22:30",
         "duration": "6 hours 15 minutes"
     },
     {
         "flightId": "8Bs5Y",
-        "airlineName": "Air Canada",
+
         "sourceCity": "Toronto",
         "sourceCountry": "Canada",
         "sourceIATA": "YYZ",
         "destinationCity": "Vancouver",
         "destinationCountry": "Canada",
         "destinationIATA": "YVR",
-        "departureTime": "2023-06-15 07:30",
-        "arrivalTime": "2023-06-15 09:45",
         "duration": "5 hours 15 minutes"
     },
     {
         "flightId": "2Ut7W",
-        "airlineName": "Delta Air Lines",
+
         "sourceCity": "New York",
         "sourceCountry": "United States",
         "sourceIATA": "JFK",
         "destinationCity": "Los Angeles",
         "destinationCountry": "United States",
         "destinationIATA": "LAX",
-        "departureTime": "2023-06-15 13:00",
-        "arrivalTime": "2023-06-15 16:30",
         "duration": "6 hours 30 minutes"
     },
     {
         "flightId": "6On4X",
-        "airlineName": "Cathay Pacific",
+
         "sourceCity": "Hong Kong",
         "sourceCountry": "China",
         "sourceIATA": "HKG",
         "destinationCity": "Sydney",
         "destinationCountry": "Australia",
         "destinationIATA": "SYD",
-        "departureTime": "2023-06-15 11:45",
-        "arrivalTime": "2023-06-15 20:00",
         "duration": "9 hours 15 minutes"
     },
     {
         "flightId": "3Ik8U",
-        "airlineName": "Lufthansa",
+
         "sourceCity": "Munich",
         "sourceCountry": "Germany",
         "sourceIATA": "MUC",
         "destinationCity": "Singapore",
         "destinationCountry": "Singapore",
         "destinationIATA": "SIN",
-        "departureTime": "2023-06-15 09:15",
-        "arrivalTime": "2023-06-15 19:30",
         "duration": "12 hours 15 minutes"
+    },
+    {
+        "flightId": "9Rf6T",
+
+        "sourceCity": "Dubai",
+        "sourceCountry": "United Arab Emirates",
+        "sourceIATA": "DXB",
+        "destinationCity": "London",
+        "destinationCountry": "United Kingdom",
+        "destinationIATA": "LHR",
+        "duration": "6 hours 45 minutes"
+    },
+    {
+        "flightId": "5Yg2S",
+
+        "sourceCity": "Melbourne",
+        "sourceCountry": "Australia",
+        "sourceIATA": "MEL",
+        "destinationCity": "Auckland",
+        "destinationCountry": "New Zealand",
+        "destinationIATA": "AKL",
+        "duration": "3 hours 45 minutes"
+    },
+    {
+        "flightId": "7Ik3P",
+
+        "sourceCity": "Tokyo",
+        "sourceCountry": "Japan",
+        "sourceIATA": "HND",
+        "destinationCity": "Seoul",
+        "destinationCountry": "South Korea",
+        "destinationIATA": "ICN",
+        "duration": "2 hours 30 minutes"
+    },
+    {
+        "flightId": "1Nh2Q",
+
+        "sourceCity": "Paris",
+        "sourceCountry": "France",
+        "sourceIATA": "CDG",
+        "destinationCity": "Rome",
+        "destinationCountry": "Italy",
+        "destinationIATA": "FCO",
+        "duration": "2 hours 30 minutes"
+    },
+    {
+        "flightId": "4Gj1V",
+
+        "sourceCity": "Chicago",
+        "sourceCountry": "United States",
+        "sourceIATA": "ORD",
+        "destinationCity": "Houston",
+        "destinationCountry": "United States",
+        "destinationIATA": "IAH",
+        "duration": "2 hours 15 minutes"
+    },
+    {
+        "flightId": "6Lu9W",
+
+        "sourceCity": "Istanbul",
+        "sourceCountry": "Turkey",
+        "sourceIATA": "IST",
+        "destinationCity": "Cairo",
+        "destinationCountry": "Egypt",
+        "destinationIATA": "CAI",
+        "duration": "3 hours 15 minutes"
+    },
+    {
+        "flightId": "9Re7A",
+
+        "sourceCity": "Vancouver",
+        "sourceCountry": "Canada",
+        "sourceIATA": "YVR",
+        "destinationCity": "Toronto",
+        "destinationCountry": "Canada",
+        "destinationIATA": "YYZ",
+        "duration": "5 hours 15 minutes"
+    },
+    {
+        "flightId": "4Dh2B",
+
+        "sourceCity": "Los Angeles",
+        "sourceCountry": "United States",
+        "sourceIATA": "LAX",
+        "destinationCity": "New York",
+        "destinationCountry": "United States",
+        "destinationIATA": "JFK",
+        "duration": "6 hours 30 minutes"
+    },
+    {
+        "flightId": "7We9C",
+
+        "sourceCity": "Sydney",
+        "sourceCountry": "Australia",
+        "sourceIATA": "SYD",
+        "destinationCity": "Hong Kong",
+        "destinationCountry": "China",
+        "destinationIATA": "HKG",
+        "duration": "9 hours 15 minutes"
+    },
+    {
+        "flightId": "2Pr6D",
+
+        "sourceCity": "Singapore",
+        "sourceCountry": "Singapore",
+        "sourceIATA": "SIN",
+        "destinationCity": "Munich",
+        "destinationCountry": "Germany",
+        "destinationIATA": "MUC",
+        "duration": "12 hours 15 minutes"
+    },
+    {
+        "flightId": "5Jl3E",
+
+        "sourceCity": "London",
+        "sourceCountry": "United Kingdom",
+        "sourceIATA": "LHR",
+        "destinationCity": "Dubai",
+        "destinationCountry": "United Arab Emirates",
+        "destinationIATA": "DXB",
+        "duration": "6 hours 45 minutes"
+    },
+    {
+        "flightId": "8Sg2F",
+
+        "sourceCity": "Auckland",
+        "sourceCountry": "New Zealand",
+        "sourceIATA": "AKL",
+        "destinationCity": "Melbourne",
+        "destinationCountry": "Australia",
+        "destinationIATA": "MEL",
+        "duration": "3 hours 45 minutes"
+    },
+    {
+        "flightId": "3We4G",
+
+        "sourceCity": "Seoul",
+        "sourceCountry": "South Korea",
+        "sourceIATA": "ICN",
+        "destinationCity": "Tokyo",
+        "destinationCountry": "Japan",
+        "destinationIATA": "HND",
+        "duration": "2 hours 30 minutes"
+    },
+    {
+        "flightId": "1De5H",
+
+        "sourceCity": "Rome",
+        "sourceCountry": "Italy",
+        "sourceIATA": "FCO",
+        "destinationCity": "Paris",
+        "destinationCountry": "France",
+        "destinationIATA": "CDG",
+        "duration": "2 hours 30 minutes"
+    },
+    {
+        "flightId": "6Tf4I",
+
+        "sourceCity": "Houston",
+        "sourceCountry": "United States",
+        "sourceIATA": "IAH",
+        "destinationCity": "Chicago",
+        "destinationCountry": "United States",
+        "destinationIATA": "ORD",
+        "duration": "2 hours 15 minutes"
+    },
+    {
+        "flightId": "9Kh7J",
+
+        "sourceCity": "Cairo",
+        "sourceCountry": "Egypt",
+        "sourceIATA": "CAI",
+        "destinationCity": "Istanbul",
+        "destinationCountry": "Turkey",
+        "destinationIATA": "IST",
+        "duration": "3 hours 15 minutes"
     }
 ]
