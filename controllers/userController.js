@@ -1,6 +1,5 @@
 const asyncHandler = require("express-async-handler");
 const Credentials = require("../models/credentialsModel");
-const Bookings = require("../models/bookingsModel");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 const session = require("express-session");
@@ -12,10 +11,10 @@ const session = require("express-session");
 
 const userRegister = asyncHandler(async (req, res) => {
     // get the email, password, name from the json object
-    const { email, password, name } = req.body;
+    const { email, password, firstName, lastName, title, phone, birthDate } = req.body;
 
     // if any of the fields are empty, return an error
-    if (!email || !password || !name) {
+    if (!email || !password || !firstName || !lastName || !title || !phone || !birthDate) {
         res.status(404);
         throw new Error("All fields are mandatory");
     }
@@ -36,12 +35,11 @@ const userRegister = asyncHandler(async (req, res) => {
     const user = await Credentials.create({
         email,
         password: hashedPassword,
-        name,
-    });
-
-    await Bookings.create({
-        email: email,
-        bookings: [],
+        firstName,
+        lastName,
+        title, 
+        phone, 
+        birthDate
     });
 
     // if user is added to the database, give a success message
@@ -49,7 +47,7 @@ const userRegister = asyncHandler(async (req, res) => {
         req.session.email = user.email;
         console.log(req.session.email);
         res.status(200).json({
-            message: "Account registered successfully",
+            message: `User with email : ${email} registered successfully`,
         });
     }
     // if an error occurs while added the user to the database, throw an error
@@ -58,22 +56,34 @@ const userRegister = asyncHandler(async (req, res) => {
         throw new Error("User data is not valid");
     }
 
-    /*     let creds = fs.readFileSync(__dirname + "/../data/credentials.json");
-    creds = JSON.parse(creds);
+    /* 
+    // add the credentials from the json file credentials.json
+    const jsonData = fs.readFileSync(__dirname + "/../data/credentials.json");
+    const credentialsData = JSON.parse(jsonData);
 
-    for (let cred of creds) {
-        const hashedPassword = await bcrypt.hash(cred.password, 10);
+    for (let cred of credentialsData) {
+        const {
+            email,
+            password,
+            firstName,
+            lastName,
+            title,
+            phone,
+            birthDate,
+        } = cred;
+
+        const hashedPassword = await bcrypt.hash(password, 10);
         await Credentials.create({
-            email: cred.email,
+            email,
             password: hashedPassword,
-            name: cred.name,
-        });
-
-        await Bookings.create({
-            email : cred.email,
-            bookings: [],
+            firstName,
+            lastName,
+            title,
+            phone,
+            birthDate: new Date(birthDate),
         });
     }
+
     res.status(200).json({ message: "Added credentials successfully" }); */
 });
 
@@ -111,7 +121,7 @@ const userLogin = asyncHandler(async (req, res) => {
 
             req.session.email = user.email;
             res.status(200).json({
-                message: "Login successful",
+                message: `${email} has logged in successfully`,
                 name: user.name,
             });
         } else {

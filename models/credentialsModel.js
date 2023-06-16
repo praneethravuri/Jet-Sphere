@@ -17,23 +17,39 @@ const mongoose = require("mongoose");
 */
 
 const credentialsSchema = mongoose.Schema(
-  {
-    email: {
-      type: String,
-      required: [true, "Please add the email"],
+    {
+        email: {
+            type: String,
+            required: [true, "Please add the email"],
+        },
+        password: {
+            type: String,
+            required: [true, "Please add the password"],
+        },
+        firstName: {
+            type: String,
+            required: [true, "Please enter your first name"],
+        },
+        lastName: {
+            type: String,
+            required: [true, "Please enter your last name"],
+        },
+        title: {
+            type: String,
+            required: [true, "Please enter a title"],
+        },
+        phone: {
+            type: String,
+            required: [true, "Please enter your phone number"],
+        },
+        birthDate: {
+            type: Date,
+            required: [true, "Please enter your birth date"],
+        },
     },
-    password: {
-      type: String,
-      required: [true, "Please add the password"],
-    },
-    name: {
-      type: String,
-      required: [true, "Please enter your name"],
-    },
-  },
-  {
-    timestamps: true,
-  }
+    {
+        timestamps: true,
+    }
 );
 
 module.exports = mongoose.model("Credentials", credentialsSchema);

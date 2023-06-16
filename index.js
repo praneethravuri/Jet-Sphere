@@ -47,9 +47,6 @@ app.get("/", (req, res) => {
 //add and search flights route
 app.use("/", require("./routes/flightsRoute"));
 
-// homepage route
-app.use("/", require("./routes/homepageRoute"));
-
 // listen to port
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
