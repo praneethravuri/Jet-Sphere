@@ -17,10 +17,28 @@ const displayBookings = asyncHandler(async (req, res) => {
     }
 
     const userBookings = await Bookings.findOne({ email });
+
+    if (!userBookings) {
+        res.status(400);
+        throw new Error(`Unable to find bookings for ${email}`);
+    }
+
     const userFlights = userBookings.bookings;
 
-    console.log(userFlights)
+    if (userFlights.length === 0) {
+        res.status(200).json({
+            message: `${email} does not have any flight bookings`,
+        });
+    }
+
+    console.log(userFlights);
     console.log(`The bookings of ${email} are ${userFlights}`);
+
+    for (let i = 0; i < userFlights.length; i++) {
+        let currentFlight = userFlights[i];
+        let flightDetails = await Flights.findOne({flightId: currentFlight});
+        console.log(flightDetails);
+    }
 
     res.status(200).json({ message: "finished" });
 
