@@ -1,11 +1,7 @@
 const express = require("express");
+const { diplayBookings } = require("../controllers/homepageController");
 const router = express.Router();
 
-const { homepage } = require("../controllers/homepageController");
-
-router.route("/").get((req, res) => {
-  // Render the index.ejs template with initial messages as empty
-  res.status(200).json({ message: "Reached homepage" });
-});
+router.post("/homepage", diplayBookings);
 
 module.exports = router;

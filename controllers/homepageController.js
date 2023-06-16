@@ -8,8 +8,12 @@ const Bookings = require("../models/bookingsModel");
 // API URL - http://localhost:5000/homepage
 
 // send a message when homepage is reached
-const homepage = asyncHandler(async (req, res) => {
+const diplayBookings = asyncHandler(async (req, res) => {
+  const currentUserEmail = req.session.email;
+  console.log(currentUserEmail);
   res.status(200).json({ message: "reached homepage" });
 });
 
-module.exports = { homepage };
+
+
+module.exports = { diplayBookings };

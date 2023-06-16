@@ -3,11 +3,20 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const errorHandler = require("./middleware/errorHandler");
 const connectDB = require("./config/dbConnection");
+const session = require("express-session");
 
 // connect to the mongoDB
 connectDB();
 
 const app = express();
+
+app.use(
+    session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
+    })
+);
 
 // Set EJS as the view engine
 app.set("view engine", "ejs");
@@ -27,7 +36,7 @@ app.use("/", require("./routes/userRoute"));
 //add and search flights route
 app.use("/", require("./routes/flightsRoute"));
 // homepage route
-app.use("/homepage", require("./routes/homepageRoute"));
+app.use("/", require("./routes/homepageRoute"));
 
 // when the localhost is entered in the browser, automatically redirect to /login
 app.get("/", (req, res) => {

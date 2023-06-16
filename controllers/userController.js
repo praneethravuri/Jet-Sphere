@@ -46,6 +46,7 @@ const userRegister = asyncHandler(async (req, res) => {
 
     // if user is added to the database, give a success message
     if (user) {
+        req.session.email = user.email;
         res.status(200).json({
             message: "Account registered successfully",
         });
@@ -106,6 +107,9 @@ const userLogin = asyncHandler(async (req, res) => {
 
         if (isPasswordMatch) {
             // Login successful
+
+            req.session.email = user.email;
+
             res.status(200).json({
                 message: "Login successful",
                 name: user.name,
