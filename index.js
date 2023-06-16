@@ -25,11 +25,9 @@ app.use(errorHandler);
 // login and register route
 app.use("/", require("./routes/userRoute"));
 //add flights to the database route
-app.use("/add-flights", require("./routes/addFlightsRoute"));
+app.use("/", require("./routes/flightsRoute"));
 // homepage route
 app.use("/homepage", require("./routes/homepageRoute"));
-// search flights route
-app.use("/search-flights", require("./routes/searchFlightsRoute"));
 
 // when the localhost is entered in the browser, automatically redirect to /login
 app.get("/", (req, res) => {
