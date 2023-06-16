@@ -8,12 +8,23 @@ const Bookings = require("../models/bookingsModel");
 // API URL - http://localhost:5000/homepage
 
 // send a message when homepage is reached
-const diplayBookings = asyncHandler(async (req, res) => {
-  const currentUserEmail = req.session.email;
-  console.log(currentUserEmail);
-  res.status(200).json({ message: "reached homepage" });
+const displayBookings = asyncHandler(async (req, res) => {
+    const email = req.session.email;
+    console.log(email);
+    if (!email) {
+        res.status(401);
+        throw new Error("Unauthorized access");
+    }
+
+    const userBookings = await Bookings.findOne({ email });
+    const userFlights = userBookings.bookings;
+
+    console.log(userFlights)
+    console.log(`The bookings of ${email} are ${userFlights}`);
+
+    res.status(200).json({ message: "finished" });
+
+    //const bookingsArray = bookings.bookings;
 });
 
-
-
-module.exports = { diplayBookings };
+module.exports = { displayBookings };

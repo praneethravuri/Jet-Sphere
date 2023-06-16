@@ -3,12 +3,12 @@ const Credentials = require("../models/credentialsModel");
 const Bookings = require("../models/bookingsModel");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
-const { error } = require("console");
+const session = require("express-session");
 
 //@desc create an account
-//@route POST /create-account
+//@route POST /register
 //@access Public
-// API URL - http://localhost:5000/create-account
+// API URL - http://localhost:5000/register
 
 const userRegister = asyncHandler(async (req, res) => {
     // get the email, password, name from the json object
@@ -47,6 +47,7 @@ const userRegister = asyncHandler(async (req, res) => {
     // if user is added to the database, give a success message
     if (user) {
         req.session.email = user.email;
+        console.log(req.session.email);
         res.status(200).json({
             message: "Account registered successfully",
         });
@@ -109,7 +110,6 @@ const userLogin = asyncHandler(async (req, res) => {
             // Login successful
 
             req.session.email = user.email;
-
             res.status(200).json({
                 message: "Login successful",
                 name: user.name,
