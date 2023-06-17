@@ -23,11 +23,6 @@ app.use(
     })
 );
 
-// Set EJS as the view engine
-app.set("view engine", "ejs");
-app.set("views", "./views");
-app.use(express.static(__dirname + "/public"));
-
 const port = process.env.PORT || 8000;
 
 // parse json
@@ -46,7 +41,7 @@ app.get("/", (req, res) => {
     res.redirect("/login");
 });
 
-//add and search flights route
+// add and search flights route
 app.use("/", require("./routes/flightsRoute"));
 
 // listen to port
