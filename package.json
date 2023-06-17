@@ -1,0 +1,42 @@
+{
+  "name": "jet-sphere",
+  "version": "1.0.0",
+  "description": "A full-stack application for flight reservation system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praneethravuri/Jet-Sphere.git"
+  },
+  "keywords": [
+    "jet",
+    "reservation",
+    "bookings",
+    "flights",
+    "node",
+    "express",
+    "javascript",
+    "website"
+  ],
+  "author": "Praneeth Ravuri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/praneethravuri/Jet-Sphere/issues"
+  },
+  "homepage": "https://github.com/praneethravuri/Jet-Sphere#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
