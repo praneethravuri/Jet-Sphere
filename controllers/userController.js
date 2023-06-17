@@ -129,7 +129,7 @@ const userLogin = asyncHandler(async (req, res) => {
             // Login successful
 
             req.session.email = user.email;
-            res.render("homepage");
+            res.render("homepage", {email : email});
         } else {
             // Invalid password
             res.status(400);
