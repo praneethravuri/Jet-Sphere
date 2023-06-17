@@ -8,11 +8,23 @@ const {
     userRegister,
     userUpdate,
     userDelete,
+    logout
 } = require("../controllers/userController");
 
-router.route("/register").post(userRegister);
-router.route("/login").post(userLogin);
+router
+    .route("/register")
+    .get((req, res) => {
+        res.render("register");
+    })
+    .post(userRegister);
+router
+    .route("/login")
+    .get((req, res) => {
+        res.render("index");
+    })
+    .post(userLogin);
 router.route("/update-account").patch(userUpdate);
 router.route("/delete-account").delete(userDelete);
+router.route("/logout").get(logout);
 
 module.exports = router;

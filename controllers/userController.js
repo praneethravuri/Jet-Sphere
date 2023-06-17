@@ -11,10 +11,19 @@ const session = require("express-session");
 
 const userRegister = asyncHandler(async (req, res) => {
     // get the email, password, name from the json object
-    const { email, password, firstName, lastName, title, phone, birthDate } = req.body;
+    const { email, password, firstName, lastName, title, phone, birthDate } =
+        req.body;
 
     // if any of the fields are empty, return an error
-    if (!email || !password || !firstName || !lastName || !title || !phone || !birthDate) {
+    if (
+        !email ||
+        !password ||
+        !firstName ||
+        !lastName ||
+        !title ||
+        !phone ||
+        !birthDate
+    ) {
         res.status(404);
         throw new Error("All fields are mandatory");
     }
@@ -37,9 +46,9 @@ const userRegister = asyncHandler(async (req, res) => {
         password: hashedPassword,
         firstName,
         lastName,
-        title, 
-        phone, 
-        birthDate
+        title,
+        phone,
+        birthDate,
     });
 
     // if user is added to the database, give a success message
@@ -120,10 +129,7 @@ const userLogin = asyncHandler(async (req, res) => {
             // Login successful
 
             req.session.email = user.email;
-            res.status(200).json({
-                message: `${email} has logged in successfully`,
-                name: user.name,
-            });
+            res.render("homepage");
         } else {
             // Invalid password
             res.status(400);
@@ -211,4 +217,13 @@ const userDelete = asyncHandler(async (req, res) => {
     });
 });
 
-module.exports = { userRegister, userLogin, userUpdate, userDelete };
+//@desc logout
+//@route GET /logout
+//@access Private
+
+const logout = asyncHandler(async (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+});
+
+module.exports = { userRegister, userLogin, userUpdate, userDelete, logout };

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jet Sphere Register</title>
+</head>
+<body>
+    <form action="/register", method="POST">
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email">
+
+        <label for="firstName">First Name: </label>
+        <input type="text" name="firstName" id="firstName">
+
+        <label for="lastName">Last Name: </label>
+        <input type="text" name="lastName" id="lastName">
+
+        <label for="title">Title: </label>
+        <select name="title" id="title">
+            <option value="Mr">Ms</option>
+            <option value="Mr">Mrs</option>
+            <option value="Mr">Mr</option>
+            <option value="Mr">Miss</option>
+        </select>
+
+        <label for="phone">Phone: </label>
+        <input type="text" name="phone" id="phone">
+
+        <label for="birthDate">Date of Birth: </label>
+        <input type="text" name="birthDate" id="birthDate">
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+
+        <button type="submit">Create an account</button>
+    </form>
+</body>
+</html>
