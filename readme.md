@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="./public/logo/svg/logo-color.svg" />
+</p>
+
+
 # Jet Sphere
 
 A full-stack web application with JWT user authentication and validation, manage flight bookings, update / delete account, administrative database changes, and session management
