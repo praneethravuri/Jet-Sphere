@@ -1,2 +1,0 @@
-red : FF4057
-dark blue: 282634
