@@ -7,6 +7,11 @@ const {
 } = require("../controllers/flightsController");
 
 router.post("/add-flights", addFlights);
-router.post("/search-flights", searchFlights);
+router
+    .route("/search-flights")
+    .get((req, res) => {
+        res.render("flights");
+    })
+    .post(searchFlights);
 
 module.exports = router;

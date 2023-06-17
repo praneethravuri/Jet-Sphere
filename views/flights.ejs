@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights</title>
+</head>
+<body>
+    <h1>Search Flights</h1>
+
+    <form action="/search-flights", method="POST">
+        <label for="sourceIATA">Source: </label>
+        <input type="text" name="sourceIATA", id="sourceIATA">
+
+        <label for="destinationIATA">Destination: </label>
+        <input type="text" name="destinationIATA", id="destinationIATA">
+
+        <input type="checkbox" name="returnTicket" id="returnTicket">
+        <label for="returnTicket">Return Ticket</label>
+
+        <button type="submit">Search Flights</button>
+    </form>
+
+    
+</body>
+</html>

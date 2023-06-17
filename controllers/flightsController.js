@@ -69,10 +69,13 @@ const addFlights = asyncHandler(async (req, res) => {
 // API URL - http://localhost:5000/search-flights
 const searchFlights = asyncHandler(async (req, res) => {
     // request the sourceIATA and destinationIATA codes from the JSON body
-    const { sourceIATA, destinationIATA, returnTicket } = req.body;
+    //const { sourceIATA, destinationIATA, returnTicket } = req.body.sourceIATA.toUpperCase();
 
+    const sourceIATA = req.body.sourceIATA.toUpperCase();
+    const destinationIATA = req.body.destinationIATA.toUpperCase();
+    const returnTicket = req.body.returnTicket;
     // throw an error if any of the fields are empty
-    if (!sourceIATA || !destinationIATA || !returnTicket) {
+    if (!sourceIATA || !destinationIATA) {
         res.status(400);
         throw new Error("All fields are mandatory");
     }
@@ -83,18 +86,25 @@ const searchFlights = asyncHandler(async (req, res) => {
         destinationIATA,
     });
 
-    if (flight) {
-        if (returnTicket === "yes") {
+    if (flight.length > 0) {
+        if (returnTicket) {
             const returnFlight = await Flights.find({
                 sourceIATA: destinationIATA,
                 destinationIATA: sourceIATA,
             });
 
-            res.status(200).json({
-                flight: flight,
-                returnFlight: returnFlight,
-            });
-        } else if (returnTicket === "no") {
+            if (returnFlight.length > 0) {
+                res.status(200).json({
+                    flight: flight,
+                    returnFlight: returnFlight,
+                });
+            } else {
+                res.status(200).json({
+                    flight: flight,
+                    message: "No return flights available",
+                });
+            }
+        } else {
             res.status(200).json({
                 flight: flight,
             });
