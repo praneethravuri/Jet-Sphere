@@ -1,6 +1,7 @@
 <p align="center">
-  <img height: '50%' src="./public/logo/png/logo-color.png" />
+  <img height = "300" width = "100%" src="./public/logo/svg/logo-color.svg" />
 </p>
+
 
 A full-stack web application with JWT user authentication and validation, manage flight bookings, update / delete account, administrative database changes, and session management
 
