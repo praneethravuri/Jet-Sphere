@@ -5,11 +5,18 @@ const errorHandler = require("./middleware/errorHandler");
 const connectDB = require("./config/dbConnection");
 const session = require("express-session");
 const store = new session.MemoryStore();
+const exphbs = require("express-handlebars");
+const hbs = exphbs.create({ defaultLayout: "main" });
 
 // connect to the mongoDB
 connectDB();
 
 const app = express();
+
+// Handlebars
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
+app.set("views", "views");
 
 app.use(
     session({

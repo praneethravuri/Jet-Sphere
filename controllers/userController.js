@@ -107,7 +107,7 @@ const userLogin = asyncHandler(async (req, res) => {
             if (isPasswordMatch) {
                 // Login successful
                 req.session.email = user.email;
-                res.status(200).json({ message: "Login successful" });
+                res.render("main", { loggedIn: true });
             } else {
                 // Invalid password
                 res.status(400);

@@ -12,7 +12,12 @@ const {
 } = require("../controllers/userController");
 
 router.route("/register").post(userRegister);
-router.route("/login").post(userLogin);
+router
+    .route("/login")
+    .get((req, res) => {
+        res.render("main");
+    })
+    .post(userLogin);
 router.route("/update-account").patch(userUpdate);
 router.route("/delete-account").delete(userDelete);
 router.route("/logout").get(logout);
