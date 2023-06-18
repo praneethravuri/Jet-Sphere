@@ -92,36 +92,28 @@ const userLogin = asyncHandler(async (req, res) => {
 
         // find if the user with the email provided is in the credentials database
         const user = await Credentials.findOne({ email });
-
         // if the user's email is not present in the database, throw an error
         if (!user) {
-            res.status(400);
-            throw new Error(`An account is not associated with ${email}`);
+            res.send({message : "invalidUser", email : email});
         } else {
             // comparing the hashed password with the provided password
-            const isPasswordMatch = await bcrypt.compare(
-                password,
-                user.password
-            );
+            const isPasswordMatch = await bcrypt.compare(password, user.password);
 
             if (isPasswordMatch) {
                 // Login successful
                 req.session.email = user.email;
-                //res.redirect("/homepage", {email : email});
-                $("#message").html("<p>Login successful</p>");
+                res.send({ message: "success" });
             } else {
                 // Invalid password
-                res.status(400);
+                res.send({ message: "invalidPassword" });
             }
         }
-
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        res.send({message : "internalServerError"});
     }
-
-    
-
 });
+
+
 
 //@desc update account details
 //@route PATCH /update-account
