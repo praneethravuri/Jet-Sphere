@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"
-        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <h1>Login</h1>
 
-    <form id="loginForm" method="POST" action="/login">
+    <form method="POST" action="/login">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <br>
@@ -25,41 +24,6 @@
         <p></p>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            $('#loginForm').submit(function (event) {
-                event.preventDefault();
-                var form = $(this);
-
-                $.ajax({
-                    type: form.attr('method'),
-                    url: form.attr('action'),
-                    data: form.serialize(),
-                    dataType: 'json',
-                    success: function (response) {
-                        if (response.message === "success") {
-                            // Login successful
-                            $('#message').html("<p>Logged in successfully</p>");
-                        }
-                        else if(response.message === "invalidPassword"){
-                            $('#message').html("<p>Logged in failure</p>");
-                        }
-
-                        else if(response.message === "invalidUser"){
-                            $('#message').html(`<p>An account with the email ${response.email} is not fount</p>`);
-                        }
-                        else{
-                            $('#message').html("<p>Internal Server Error : 500</p>");
-                        }
-                    },
-                    error: function (xhr, textStatus, errorThrown) {
-                        $('#message').html(`<p>${errorThrown}</p>`);
-                    }
-                });
-            });
-        });
-
-    </script>
 </body>
 
 </html>

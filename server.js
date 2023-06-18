@@ -32,8 +32,6 @@ app.use(
     })
 );
 
-app.use(express.static('public'));
-
 const port = process.env.PORT || 8000;
 
 // parse json
